@@ -10,7 +10,6 @@ from flask import Flask, request, render_template
 import datetime
 from dateutil import tz
 import os
-import pytz
 import pymongo
 
 app = Flask(__name__,template_folder='')
@@ -54,11 +53,10 @@ def save():
 
     # timeNow = datetime.datetime.utcnow().replace(tzinfo=pytz.utc)
     utcTime = datetime.datetime.utcnow()
-    from_zone = tz.getdatetime.tz('UTC')
+    from_zone = tz.gettz('UTC')
     to_zone = tz.gettz('Europe/Istanbul')
     utc = utcTime.replace(tzinfo=from_zone)
     localTime = utc.astimezone(to_zone)
-
 
     memoryDict['timestamp'] = localTime.timestamp()
     memoryDict['date'] = localTime.date().strftime('%d/%m/%Y, %A')
