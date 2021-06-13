@@ -33,7 +33,7 @@ except:
 
 @app.route('/', methods=['GET'])
 def home():
-    if request.method == "GET":      
+    if request.method == "GET":  
         return render_template('index.html')
 
 @app.route('/',methods=['POST'])
@@ -54,7 +54,7 @@ def save():
 
     # timeNow = datetime.datetime.utcnow().replace(tzinfo=pytz.utc)
     utcTime = datetime.datetime.utcnow()
-    from_zone = tz.gettz('UTC')
+    from_zone = tz.getdatetime.tz('UTC')
     to_zone = tz.gettz('Europe/Istanbul')
     utc = utcTime.replace(tzinfo=from_zone)
     localTime = utc.astimezone(to_zone)
