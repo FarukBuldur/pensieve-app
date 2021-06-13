@@ -8,7 +8,9 @@ Created on Tue June 12 09:30:19 2021
 # import numpy as np
 from flask import Flask, request, render_template
 import datetime
+from dateutil import tz
 import os
+import pytz
 import pymongo
 
 app = Flask(__name__,template_folder='')
@@ -31,7 +33,7 @@ except:
 
 @app.route('/', methods=['GET'])
 def home():
-    if request.method == "GET":
+    if request.method == "GET":      
         return render_template('index.html')
 
 @app.route('/',methods=['POST'])
@@ -50,10 +52,17 @@ def save():
             for value in formValues.getlist(key):
                 memoryDict[key] = value
 
-    timeNow = datetime.datetime.now()
-    memoryDict['timestamp'] = timeNow.timestamp()
-    memoryDict['date'] = timeNow.date().strftime('%d/%m/%Y, %A')
-    memoryDict['time'] = timeNow.time().strftime('%H:%M:%S')
+    # timeNow = datetime.datetime.utcnow().replace(tzinfo=pytz.utc)
+    utcTime = datetime.datetime.utcnow()
+    from_zone = tz.gettz('UTC')
+    to_zone = tz.gettz('Europe/Istanbul')
+    utc = utcTime.replace(tzinfo=from_zone)
+    localTime = utc.astimezone(to_zone)
+
+
+    memoryDict['timestamp'] = localTime.timestamp()
+    memoryDict['date'] = localTime.date().strftime('%d/%m/%Y, %A')
+    memoryDict['time'] = localTime.time().strftime('%H:%M:%S')
 
     try:
         database_name = "Memento"
