@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Pensieve</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./static/css/main.css">
+  <link href="http://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+  <link rel="icon" type="image/png" href="static/images/wand_icon.png"/>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <form class="form" method="POST">
+      <div class="pageTitle title">Pensieve</div>
+      <div class="secondaryTitle title">Please drop your memory or thought into Pensieve !</div>
+      <input type="text" class="magicWord formEntry" placeholder="Secret" name="magicWord"/>
+      <input type="text" class="memoryTitle formEntry" placeholder="Title" name="memoryTitle"/>
+      <input type="text" class="memoryType formEntry" placeholder="Type" name="memoryType"/>
+      <textarea type="text" class="message formEntry" placeholder="Memory or Thought" name="memory"></textarea>
+      <!--<input type="checkbox" class="termsConditions" value="Term">
+      <label style="color: grey" for="terms"> I Accept the <span style="color: #0e3721">Terms of Use</span> & <span style="color: #0e3721">Privacy Policy</span>.</label> -->
+      <br>
+      <button type="submit" class="submit formEntry" onclick="thanks()">Submit</button>
+    </form>
+  </div>
+</body>
+
+</html>

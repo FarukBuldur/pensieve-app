@@ -1,0 +1,160 @@
+body {
+  background-color: #a56b2d;
+  /*background-image: url("../images/marauder_2.jpg");*/
+  /* background-position: center; /* Center the image  */
+  /*background-repeat: no-repeat; /* Do not repeat the image */
+  /*-webkit-background-size: cover;*/
+  /*-moz-background-size: cover;*/
+  /*-o-background-size: cover;*/
+  /*background-size: cover; /* Resize the background image to cover the entire container */
+  background-position-y: 0%;
+  background-position-x: 50%;
+  /*height: auto;
+  width: auto;*/
+  max-height: 100%;
+  background-image: url("../images/marauder_2.jpg");
+  /*background-size: cover;*/
+  /* Center and scale the image nicely */
+  /* background-repeat: no-repeat; */
+}
+
+
+#title-Tag-Line {
+  font-size: 20px;
+}
+/* .card-item__bg{
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  display: block;
+  position: relative;
+  margin: 30px auto;
+  transform: translate(0px, 50px);
+  z-index: 5;
+} */
+
+/* form animation starts */
+.form {
+  /* background: #fff; */
+  background-color: transparent;
+  box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+  border-radius: 5px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  top:45%;
+  left: 0;
+  right: 0;
+  position: absolute;
+
+  border-top: 5px solid #0e3721;
+/*   z-index: 1; */
+  animation: bounce 1.5s infinite;
+}
+::-webkit-input-placeholder {
+  font-size: 1.3em;
+}
+
+.title{
+  display: block;
+  /* font-family: sans-serif; */
+  font-family: 'Harry Potter', sans-serif;
+  margin: 10px auto 5px;
+  width: 300px;
+}
+.termsConditions{
+  margin: 0 auto 5px 80px;
+}
+
+.pageTitle{
+  color: #eecb9b;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+
+}
+.secondaryTitle{
+  color: #DED93E;
+  text-align: center;
+}
+
+.memoryTitle {
+  /* background-color: #ebebeb; */
+  background-color: transparent;
+  color: white;
+  /* font-family: 'Harry Potter', sans-serif; */
+}
+.memoryTitle:hover {
+  border-bottom: 5px solid #0e3721;
+  height: 30px;
+  width: 380px;
+  transition: ease 0.5s;
+}
+
+.memoryType {
+  /* background-color: #ebebeb; */
+  background-color: transparent;
+  height: 2em;
+  color: white;
+}
+
+.memoryType:hover {
+  border-bottom: 5px solid #0e3721;
+  height: 30px;
+  width: 380px;
+  transition: ease 0.5s;
+}
+
+.message {
+  /* background-color: #ebebeb; */
+  background-color: transparent;
+  overflow: hidden;
+  height: 10rem;
+  color: white;
+}
+
+.message:hover {
+  border-bottom: 5px solid #0e3721;
+  height: 12em;
+  width: 380px;
+  transition: ease 0.5s;
+}
+
+.formEntry {
+  display: block;
+  margin: 30px auto;
+  min-width: 300px;
+  padding: 10px;
+  border-radius: 2px;
+  border: none;
+  transition: all 0.5s ease 0s;
+}
+
+.submit {
+  width: 200px;
+  color: white;
+  background-color: #0e3721;
+  font-size: 20px;
+}
+
+.submit:hover {
+  box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
+  transform: translateY(-3px);
+  width: 300px;
+  border-top: 5px solid #0e3750;
+  border-radius: 0%;
+}
+
+@keyframes bounce {
+  0% {
+    tranform: translate(0, 4px);
+  }
+  50% {
+    transform: translate(0, 8px);
+  }
+} 
+
