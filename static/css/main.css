@@ -1,12 +1,12 @@
 body {
-  /* background-color: #d1f3e7; */
+  background-color: #61441d;
   background-image: url("../images/pensieve_image_3.jpg");
   /* background-position: center; /* Center the image  */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   height: auto;
   width: auto;
-  max-width: 100%;
+  /* max-width: 100%; */
 }
 
 #title-Tag-Line {
